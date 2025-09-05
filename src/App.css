@@ -1,0 +1,162 @@
+html, body {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  background-color: white;
+  color: #202020;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  color: #404040;
+}
+#loading {
+  background-color: #FFFFFF;
+  color: #404040;
+  text-align: center;
+}
+span.loadCircle {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAP1BMVEUAAAB2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZyFzwnAAAAFHRSTlMAEvRFvX406baecwbf0casimhSHyiwmqgAAADpSURBVHja7dbJbQMxAENRahnN5lkc//5rDRAkDeRgHszXgACJoKiIiIiIiIiIiIiIiIiIiIj4HHspsrpAVhdVVguzrA4OWc10WcEqpwKbnBo0OU1Q5NSpsoJFTgOecrrdEag85DRgktNqfoEdTjnd7hrEHMEJvmRUYJbTYk5Agy6nau6Abp5Cm7mDBtRdPi9gyKdU7w4p1fsLvyqs8hl4z9/w3n/Hmr9WoQ65lAU4d7lMYOz//QboRR5jBZibLMZdAR6O/Vfa1PlxNr3XdS3HzK/HVPRu/KnLs8iAOh993VpRRERERMT/fAN60wwWaVyWwAAAAABJRU5ErkJggg==');
+  background-size: 2em 2em;
+  margin-right: 0.5em;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+.button_stop {
+  margin-top: 20px;
+  text-decoration: none;
+  height: 65px;
+  width: 360px;
+  font-size: 20px;
+  cursor: pointer;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset 0 2px 2px rgba(255, 255, 255, 0.2), inset 0 -2px 2px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #003597c5 0%, #134299c5 100%);
+  color: white;
+}
+.button_running {
+  margin-top: 20px;
+  text-decoration: none;
+  height: 55px;
+  width: 300px;
+  font-size: 20px;
+  cursor: not-allowed;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset 0 2px 2px rgba(255, 255, 255, 0.2), inset 0 -2px 2px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #003597c5 0%, #134299c5 100%);
+  color: white;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.button:hover {
+  background: linear-gradient(135deg, #0055b8 0%, #2a5db0 100%);
+}
+#serverArea {
+  margin-top: 1em;
+}
+#server {
+  font-size: 1em;
+  padding: 0.2em;
+}
+#test {
+  margin-top: 2em;
+  margin-bottom: 12em;
+}
+div.testArea {
+  display: inline-block;
+  width: 16em;
+  height: 12.5em;
+  position: relative;
+  box-sizing: border-box;
+}
+div.testArea2 {
+  display: flex;
+  flex-direction: column;
+  width: 14em;
+  height: 7em;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+}
+div.testArea div.testName {
+  position: absolute;
+  top: 0.1em;
+  left: 0;
+  width: 100%;
+  font-size: 1.4em;
+  z-index: 9;
+}
+div.testArea2 div.testName {
+  display: block;
+  text-align: center;
+  font-size: 1.4em;
+}
+.meterText {
+  color: #134299c5;
+}
+div.testArea div.meterText {
+  position: absolute;
+  bottom: 1.55em;
+  left: 0;
+  width: 100%;
+  font-size: 2.5em;
+  z-index: 9;
+}
+div.testArea2 div.meterText {
+  display: inline-block;
+  font-size: 2.5em;
+}
+div.meterText:empty:before {
+  content: "0.00";
+}
+div.testArea div.unit {
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+div.testArea2 div.unit {
+  display: inline-block;
+}
+div.testArea canvas {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+div.testGroup {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+#shareArea {
+  width: 95%;
+  max-width: 40em;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+#shareArea > * {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.25em 0;
+}
